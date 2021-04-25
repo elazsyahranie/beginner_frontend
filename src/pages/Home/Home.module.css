@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+body {
+  font-family: "Mulish", sans-serif;
+}
+
 .containerCenter {
   text-align: center;
 }
@@ -34,4 +40,35 @@
 
 .alignEnd {
   text-align: end;
+}
+
+.vanguardCard {
+  background-color: white;
+  box-shadow: 0px 5px 10px 0px #bababa;
+  border: none;
+}
+
+.purpleText {
+  color: #5f2eea;
+}
+
+.purpleButton {
+  background-color: #5f2eea !important;
+  border: #5f2eea !important;
+  width: 7rem !important;
+}
+
+.purpleButtonOutline {
+  background-color: white !important;
+  color: #5f2eea !important;
+  border: 1px solid #5f2eea !important;
+  width: 7rem;
+}
+
+.greyText {
+  color: #6e7191;
+}
+
+.myOverflow {
+  overflow-x: hidden;
 }

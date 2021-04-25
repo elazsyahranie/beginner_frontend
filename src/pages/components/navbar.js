@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import tickitzLogo from "../components/img/Tickitz_2.png";
 import styles from "./navbar.module.css";
+import KacaPembesar from "./img/icons/kaca_pembesar.png";
 import {
   Container,
   Navbar,
@@ -29,18 +30,23 @@ class NavBar extends Component {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link href="#home">Movies</Nav.Link>
-                <Nav.Link href="#link">Cinemas</Nav.Link>
-                <Nav.Link href="#link">Buy Ticket</Nav.Link>
+                <Nav.Link as={Link} to="/pages/Home">
+                  Home
+                </Nav.Link>
+                <Nav.Link as={Link} to="/pages/PaymentPage">
+                  Payment
+                </Nav.Link>
+                <Nav.Link href="#link">Profile</Nav.Link>
               </Nav>
-              <Form inline>
-                <FormControl
-                  type="text"
-                  placeholder="Search"
-                  className="mr-sm-2"
-                />
-                <Button variant="outline-success">Search</Button>
-              </Form>
+              <Nav inline>
+                <Nav.Link>Location</Nav.Link>
+                <Nav.Link>
+                  <img src={KacaPembesar} alt="" className="img-fluid"></img>
+                </Nav.Link>
+                <Button variant="primary" className={styles.purpleButton}>
+                  Sign Up
+                </Button>
+              </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>

@@ -1,0 +1,11 @@
+.purpleButton {
+  background-color: #5f2eea !important;
+  border: #5f2eea !important;
+}
+
+.purpleButtonOutline {
+  background-color: transparent;
+  color: #5f2eea;
+  border: 1px solid #5f2eea;
+  width: 182px;
+}

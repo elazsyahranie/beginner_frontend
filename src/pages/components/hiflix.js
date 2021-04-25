@@ -8,11 +8,11 @@ class ebvIdCard extends Component {
       <>
         <Card style={{ width: "18rem" }}>
           <Card.Body>
-            <Row className="h-100">
+            <Row style={{ height: "9rem" }}>
               <Col lg={7} md={7} sm={7} xs={7} className="my-auto">
                 <img src={Hiflix} alt="" class="img-fluid"></img>
               </Col>
-              <Col lg={5} md={5} sm={5} xs={5}>
+              <Col lg={5} md={5} sm={5} xs={5} className="my-auto">
                 <Row>
                   <h4>hiflix Cinema</h4>
                 </Row>

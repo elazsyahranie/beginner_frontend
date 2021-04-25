@@ -3,10 +3,20 @@ import axios from "axios";
 import Navbar from "../components/navbar";
 import Cards from "../components/card";
 import MiniNavbarShowing from "../components/miniNavbar";
-import Footer from "../components/footer";
+import MiniNavbarSecond from "../components/miniNavbarSecond";
+import MyFooter from "../components/myfooter";
+// import Footer from "../components/footer";
 import myStyle from "./Home.module.css";
 import homeHeaderImg from "../components/img/home_image/Group_14.png";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Image,
+  Card,
+  Form,
+  Button,
+} from "react-bootstrap";
 // import Cards from "../components/card";
 
 class Home extends Component {
@@ -28,6 +38,14 @@ class Home extends Component {
   componentDidMount() {
     this.getData();
   }
+
+  // setUpdate = () => {
+  //   console.log('Set Update')
+  // }
+
+  // updateData = () => {
+  //   console.log('Update Data')
+  // }
 
   getData = () => {
     console.log("Get Data !");
@@ -68,7 +86,7 @@ class Home extends Component {
         <Container className={myStyle.pageVerticalSpacing}>
           <Row className="w-100">
             <Col lg={6} md={6} sm={6} className="my-auto">
-              <div className={myStyle.textCentered}>
+              <div className={`${myStyle.textCentered} ${myStyle.purpleText}`}>
                 <span>Nearest Cinema, Newest Movie</span>
                 <h2>Find Out Now!</h2>
               </div>
@@ -94,7 +112,45 @@ class Home extends Component {
             </Row>
           </Container>
         </div>
-        <Footer />
+        <Container className={myStyle.pageVerticalSpacing}>
+          <MiniNavbarSecond />
+          <Row>
+            {this.state.data.map((item, index) => {
+              return (
+                <Col lg={3} md={3} key={index}>
+                  <Cards data={item} />
+                </Col>
+              );
+            })}
+          </Row>
+        </Container>
+        <Container className="py-5">
+          <Card className={`${myStyle.vanguardCard}`}>
+            <div className={`mx-auto text-center py-4 ${myStyle.purpleText}`}>
+              <h5>Be the vanguard of the</h5>
+              <h1>Moviegoers</h1>
+            </div>
+            <div className={`mx-auto text-center`}>
+              <Row className="px-2">
+                <Col lg={10} md={10} sm={10} xs={12} className="pt-2">
+                  <Form>
+                    <Form.Control placeholder="Input your name"></Form.Control>
+                  </Form>
+                </Col>
+                <Col lg={2} md={2} sm={2} xs={12} className="pt-2">
+                  <Button className={myStyle.purpleButton}>Submit</Button>
+                </Col>
+              </Row>
+            </div>
+            <div className={`mx-auto text-center py-4`}>
+              <p className={myStyle.greyText}>
+                By joining you as a Tickitz member, <br></br> we will always
+                send latest updates via email!
+              </p>
+            </div>
+          </Card>
+        </Container>
+        <MyFooter />
       </>
     );
   }

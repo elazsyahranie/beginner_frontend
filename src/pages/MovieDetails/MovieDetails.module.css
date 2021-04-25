@@ -1,3 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+body {
+  font-family: "Mulish", sans-serif;
+}
+
 .greyBackground {
   background-color: #f5f6f8;
+}
+
+.greyText {
+  color: #8b8b8b;
+}
+
+.moviePoster {
+  height: 23rem;
+  border: 1px solid #8f8f8f;
+  border-radius: 5px;
+}
+
+.purpleButton {
+  background-color: #5f2eea;
+  width: 182px;
 }

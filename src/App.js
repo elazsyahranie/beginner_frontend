@@ -5,6 +5,8 @@ import HomePage from "./pages/Home/homePage";
 import MovieDetails from "./pages/MovieDetails/MovieDetails";
 import OrderPage from "./pages/OrderPage/OrderPage";
 import PaymentPage from "./pages/PaymentPage/PaymentPage";
+import AdminPage from "./pages/AdminPage/adminPage";
+import CineFlix from "./pages/components/CineFlix";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import BasicMovieDetail from "./pages/learning/MovieDetail/MovieDetail";
 
@@ -14,9 +16,14 @@ class App extends Component {
       <Router>
         <Switch>
           <Route path="/pages/Home" exact component={HomePage} />
-          <Route path="/pages/MovieDetails" exact component={MovieDetails} />
-          <Route path="/pages/OrderPage" exact component={OrderPage} />
+          <Route
+            path="/pages/MovieDetails/:id"
+            exact
+            component={MovieDetails}
+          />
+          <Route path="/pages/OrderPage/:id" exact component={OrderPage} />
           <Route path="/pages/PaymentPage" exact component={PaymentPage} />
+          <Route path="/pages/AdminPage" exact component={AdminPage} />
         </Switch>
       </Router>
     );

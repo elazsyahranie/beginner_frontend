@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+body {
+  font-family: "Mulish", sans-serif;
+}
+
 .greyBackground {
   background-color: #f5f6f8;
 }
@@ -8,11 +14,14 @@
 }
 
 .purpleButton {
-  background-color: #5f2eea;
-  border: #5f2eea;
+  background-color: #5f2eea !important;
+  border: #5f2eea !important;
+  width: 182px;
 }
 
 .purpleButtonOutline {
-  background-color: white;
-  border: #5f2eea;
+  background-color: transparent !important;
+  border: 1px solid #5f2eea !important;
+  color: #5f2eea !important;
+  width: 182px;
 }
