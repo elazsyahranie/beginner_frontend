@@ -3,14 +3,7 @@ import { Link } from "react-router-dom";
 import tickitzLogo from "../components/img/Tickitz_2.png";
 import styles from "./navbar.module.css";
 import KacaPembesar from "./img/icons/kaca_pembesar.png";
-import {
-  Container,
-  Navbar,
-  Nav,
-  Form,
-  FormControl,
-  Button,
-} from "react-bootstrap";
+import { Container, Navbar, Nav, Button } from "react-bootstrap";
 
 // const myStyle = {
 //   myOwnStyle: {

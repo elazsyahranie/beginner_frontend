@@ -6,7 +6,6 @@ import MovieDetails from "./pages/MovieDetails/MovieDetails";
 import OrderPage from "./pages/OrderPage/OrderPage";
 import PaymentPage from "./pages/PaymentPage/PaymentPage";
 import AdminPage from "./pages/AdminPage/adminPage";
-import CineFlix from "./pages/components/CineFlix";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import BasicMovieDetail from "./pages/learning/MovieDetail/MovieDetail";
 

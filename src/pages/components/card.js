@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Card } from "react-bootstrap";
 import style from "./card.module.css";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 // withRouter dibtuhkan jika kita ingin menggunakan history.push
 
@@ -30,13 +30,7 @@ class Cards extends Component {
   // }
 
   render() {
-    const {
-      movie_id,
-      movie_name,
-      movie_category,
-      movie_release_date,
-    } = this.props.data;
-    const { handleUpdate, handleDelete, data } = this.props;
+    const { movie_id, movie_name, movie_category } = this.props.data;
     return (
       <>
         <Card
