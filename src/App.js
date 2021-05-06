@@ -7,6 +7,7 @@ import OrderPage from "./pages/OrderPage/OrderPage";
 import PaymentPage from "./pages/PaymentPage/PaymentPage";
 import AdminPage from "./pages/AdminPage/adminPage";
 import LogIn from "./pages/login/Login";
+import signup from "./pages/signup/signup";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import BasicMovieDetail from "./pages/learning/MovieDetail/MovieDetail";
 
@@ -15,7 +16,7 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route path="/pages/Home" exact component={HomePage} />
+          <Route path="/" exact component={HomePage} />
           <Route
             path="/pages/MovieDetails/:id"
             exact
@@ -24,7 +25,8 @@ class App extends Component {
           <Route path="/pages/OrderPage/:id" exact component={OrderPage} />
           <Route path="/pages/PaymentPage" exact component={PaymentPage} />
           <Route path="/pages/AdminPage" exact component={AdminPage} />
-          <Route path="/LogIn" exact component={LogIn} />
+          <Route path="/login" exact component={LogIn} />
+          <Route path="/signup" exact component={signup} />
         </Switch>
       </Router>
     );

@@ -1,44 +1,27 @@
 import React, { Component } from "react";
 import { Container, Row, Form, Button, Col } from "react-bootstrap";
-import tickitzLogoWhite from "../components/img/tickitz_1.png";
-import myStyle from "./LogIn.module.css";
+import { Link } from "react-router-dom";
+import myStyle from "./signup.module.css";
 import FacebookButton from "../components/img/icons/bx_bxl-facebook-circle.png";
 import GoogleButton from "../components/img/icons/flat-color-icons_google.png";
 
-class LogIn extends Component {
+class signup extends Component {
   render() {
     return (
       <>
         <Row className="w-100 min-vw-100 min-vh-100">
-          <Col
-            lg={7}
-            md={7}
-            sm={7}
-            xs={12}
-            className={`${myStyle.leftSide} w-100 h-100`}
-          >
-            <Row className={`${myStyle.purpleBackground} h-100`}>
-              <Col lg={6} md={6} sm={6} xs={6} className="mx-auto my-auto">
-                <img src={tickitzLogoWhite} className="img-fluid" alt=""></img>
-                <h3 className={`${myStyle.whiteText} text-center`}>
-                  Wait, Watch, Wow!
-                </h3>
-              </Col>
-            </Row>
+          <Col lg={7} md={7} sm={7} xs={12} className={`${myStyle.leftSide}`}>
+            <Row className={myStyle.purpleBackground}>Right Side</Row>
           </Col>
           <Col lg={5} md={5} sm={5} xs={12}>
             <Row>
-              <Col lg={10} md={10} sm={10} xs={10} className="mx-auto my-5">
-                <h1>Sign In</h1>
-                <p>
-                  Sign in with the data that you entered during registration
-                </p>
-                <Form onSubmit={this.handleLogin} className={`mt-3`}>
+              <Col lg={10} md={10} sm={10} xs={10} className="mx-5 my-5">
+                <h5>Fill Your Additional Details</h5>
+                <Form onSubmit={this.handleLogin} className={`mt-5`}>
                   <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email</Form.Label>
                     <Form.Control
                       type="email"
-                      className={myStyle.formHeight}
                       placeholder="Enter email"
                       name="userEmail"
                     />
@@ -47,21 +30,26 @@ class LogIn extends Component {
                     <Form.Label>Password</Form.Label>
                     <Form.Control
                       type="password"
-                      className={myStyle.formHeight}
                       placeholder="Password"
                       name="userPassword"
                     />
                   </Form.Group>
+                  <Form.Check
+                    type="checkbox"
+                    label="I agree to terms and conditions"
+                    className="mb-2"
+                  />
                   <Button
                     variant="primary"
                     className={myStyle.purpleButton}
                     type="submit"
                   >
-                    Sign In
+                    Join now for free
                   </Button>
                 </Form>
                 <p className={`my-5 text-center`}>
-                  Forgot your password? Reset now!
+                  Do you already have an account?{" "}
+                  <Link to="/login">Log in</Link>
                 </p>
                 <Row className="d-flex justify-content-between">
                   <Col lg={6} md={6} sm={6} xs={12} className="mt-1">
@@ -94,4 +82,4 @@ class LogIn extends Component {
   }
 }
 
-export default LogIn;
+export default signup;
