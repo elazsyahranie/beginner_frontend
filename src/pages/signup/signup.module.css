@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+body {
+  font-family: "Mulish", sans-serif;
+}
+
+.customBorder {
+  border: 1px solid white;
+  border-radius: 100%;
+}
+
 .leftSide {
   background: url("../components/img/login_register/image_1.png");
   background-repeat: no-repeat;

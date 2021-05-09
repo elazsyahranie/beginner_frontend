@@ -59,16 +59,23 @@ class signup extends Component {
                   sm={12}
                   className={`${myStyle.whiteText} mt-5`}
                 >
-                  <h2>Let's build your account</h2>
-                  <p>
+                  <h2 className="pb-4">Let's build your account</h2>
+                  <h5 className="fw-light">
                     To be a loyal moviegoer and access of all features, your
                     details are required.
-                  </p>
-                  <ul>
-                    <li>Fill your additional details</li>
-                    <li>Additional details</li>
-                    <li>Done</li>
-                  </ul>
+                  </h5>
+                  <h5 className="my-4">
+                    <span>1</span>
+                    <span className="mx-4">Fill your additional details</span>
+                  </h5>
+                  <h5 className="my-4">
+                    <span>2</span>
+                    <span className="mx-4">Activate your account</span>
+                  </h5>
+                  <h5 className="my-4">
+                    <span>3</span>
+                    <span className="mx-4">Done</span>
+                  </h5>
                 </Col>
               </div>
             </Row>

@@ -22,14 +22,14 @@ class App extends Component {
         <Router>
           <Switch>
             <PublicRoute path="/" exact component={HomePage} />
-            <PrivateRoute
+            <PublicRoute
               path="/MovieDetails/:id"
               exact
               component={MovieDetails}
             />
             <PrivateRoute path="/OrderPage/:id" exact component={OrderPage} />
             <PrivateRoute path="/PaymentPage" exact component={PaymentPage} />
-            <PrivateRoute path="/AdminPage" exact component={AdminPage} />
+            <PublicRoute path="/AdminPage" exact component={AdminPage} />
             <PublicRoute path="/login" exact component={LogIn} />
             <PublicRoute path="/signup" exact component={signup} />
           </Switch>

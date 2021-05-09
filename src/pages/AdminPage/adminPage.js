@@ -8,9 +8,18 @@ import MyFooter from "../components/myfooter";
 import myStyle from "./adminPage.module.css";
 // import homeHeaderImg from "../components/img/home_image/Group_14.png";
 import { Container, Row, Col, Form } from "react-bootstrap";
+import axiosApiInstances from "../../utils/axios";
 // import Cards from "../components/card";
 
 class AdminPage extends Component {
+  // componentDidMount() {
+  //   this.getData();
+  // }
+
+  // getData = () => {
+  //   axiosApiInstances.get(`https://localhost/3001/movie/1`);
+  // };
+
   render() {
     return (
       <>
