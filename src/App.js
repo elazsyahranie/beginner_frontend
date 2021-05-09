@@ -1,6 +1,10 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
 // import BasicReact from "./pages/learning/BasicReact/BasicReact";
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import PrivateRoute from "./helpers/PrivateRoute";
+import PublicRoute from "./helpers/PublicRoute";
 import HomePage from "./pages/Home/homePage";
 import MovieDetails from "./pages/MovieDetails/MovieDetails";
 import OrderPage from "./pages/OrderPage/OrderPage";
@@ -14,21 +18,23 @@ import "bootstrap/dist/css/bootstrap.min.css";
 class App extends Component {
   render() {
     return (
-      <Router>
-        <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route
-            path="/pages/MovieDetails/:id"
-            exact
-            component={MovieDetails}
-          />
-          <Route path="/pages/OrderPage/:id" exact component={OrderPage} />
-          <Route path="/pages/PaymentPage" exact component={PaymentPage} />
-          <Route path="/pages/AdminPage" exact component={AdminPage} />
-          <Route path="/login" exact component={LogIn} />
-          <Route path="/signup" exact component={signup} />
-        </Switch>
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <Switch>
+            <PublicRoute path="/" exact component={HomePage} />
+            <PrivateRoute
+              path="/MovieDetails/:id"
+              exact
+              component={MovieDetails}
+            />
+            <PrivateRoute path="/OrderPage/:id" exact component={OrderPage} />
+            <PrivateRoute path="/PaymentPage" exact component={PaymentPage} />
+            <PrivateRoute path="/AdminPage" exact component={AdminPage} />
+            <PublicRoute path="/login" exact component={LogIn} />
+            <PublicRoute path="/signup" exact component={signup} />
+          </Switch>
+        </Router>
+      </Provider>
     );
   }
 }

@@ -31,7 +31,7 @@ class Home extends Component {
       data: [],
       pagination: {},
       page: 1,
-      limit: 3,
+      limit: 4,
     };
   }
 
