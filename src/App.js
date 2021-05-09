@@ -12,6 +12,7 @@ import PaymentPage from "./pages/PaymentPage/PaymentPage";
 import AdminPage from "./pages/AdminPage/adminPage";
 import LogIn from "./pages/login/Login";
 import signup from "./pages/signup/signup";
+import comingSoon from "./pages/comingSoon/comingSoon";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import BasicMovieDetail from "./pages/learning/MovieDetail/MovieDetail";
 
@@ -32,6 +33,7 @@ class App extends Component {
             <PublicRoute path="/AdminPage" exact component={AdminPage} />
             <PublicRoute path="/login" exact component={LogIn} />
             <PublicRoute path="/signup" exact component={signup} />
+            <PublicRoute path="/comingsoon" exact component={comingSoon} />
           </Switch>
         </Router>
       </Provider>

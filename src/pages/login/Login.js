@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Row, Form, Button, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import tickitzLogoWhite from "../components/img/tickitz_1.png";
 import myStyle from "./LogIn.module.css";
 import FacebookButton from "../components/img/icons/bx_bxl-facebook-circle.png";
@@ -111,7 +112,11 @@ class LogIn extends Component {
                         className="img-fluid"
                         alt=""
                       ></img>
-                      <span className="my-auto mx-3">Google</span>
+                      <span className="my-auto mx-3">
+                        <Link to="/comingsoon" className={myStyle.blackLink}>
+                          Google
+                        </Link>
+                      </span>
                     </Button>
                   </Col>
                   <Col lg={6} md={6} sm={6} xs={12} className="mt-1">
@@ -121,7 +126,11 @@ class LogIn extends Component {
                         className="img-fluid my-auto"
                         alt=""
                       ></img>
-                      <span className="my-auto mx-3">Facebook</span>
+                      <span className="my-auto mx-3">
+                        <Link to="/comingsoon" className={myStyle.blackLink}>
+                          Facebook
+                        </Link>
+                      </span>
                     </Button>
                   </Col>
                 </Row>
